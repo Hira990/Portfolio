@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Internal CSS for specific sections */
+
+        /* Banner Section */
+        .banner {
+            position: relative;
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 2em 0;
+        }
+
+        .banner .content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .banner .content p.major {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .banner .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* About Section */
+        .spotlight h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .spotlight p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .spotlight .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+        .gallery article {
+            flex: 1 1 calc(50% - 1em);
+            max-width: 300px;
+        }
+
+        .gallery .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 0.5em;
+        }
+
+        .actions.fixed {
+            margin: 0;
+            padding: 0;
+        }
+
+        .button.small {
+            padding: 0.5em 1em;
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
+
+        <!-- Banner -->
+        <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <h1>H i r a<br> K h a l i d</h1>
+                <p class="major">AI Engineer<br> Data Analyst<br> Web Scraper</p>
+                <ul class="actions stacked">
+                    <li><a href="#first" class="button big wide smooth-scroll-middle">Get Started &#x2193;</a></li>
+                </ul>
+            </div>
+            <div class="image"><img src="images/ai.jpg" alt="AI Engineer" /></div>                        
+        </section>
+
+        <!-- About -->
+        <section class="wrapper style1 align-center">
+            <div class="inner">
+                <h1>About</h1>
+            </div>
+            <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+                <div class="content">
+                    <h2>AI Engineer</h2>
+                    <p>Engineering the Future with Cutting-Edge AI Solutions</p>
+                    <ul class="actions stacked">
+                        <li><a href="#" class="button">Learn More</a></li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/output5.png" alt="AI Engineer Solutions" />
+                </div>
+            </section>
+
+            <!-- Data Analyst -->
+            <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+                <div class="content">
+                    <h2>Data Analyst</h2>
+                    <p>Transforming Data into Actionable Insights with Creative and Dynamic Visualizations</p>
+                    <ul class="actions stacked">
+                        <li><a href="https://lveczo-hira0khalid.shinyapps.io/CustomerAnalysis/" class="button">Shiny(R)</a></li>
+                        <li><a href="https://app.powerbi.com/view?r=eyJrIjoiOGQ1OWI0MTAtMDI5MC00Y2FjLTk3ZjctMjAzZTk2YTc3MzBkIiwidCI6IjEyYjIyMWIzLTA0NjQtNDIyMy04OWU1LTg4ODgzNTc3OGI1OCIsImMiOjl9" class="button">PowerBI</a></li>
+                        <li><a href="https://drive.google.com/file/d/1HUnV3BgIqVk3_EZZG2n4tzbuKJ-wmNka/view" class="button">Tableau</a></li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/data-analyst-image.png" alt="Data Analyst" />
+                </div>
+            </section>
+
+            <!-- Web Scraper -->
+            <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+                <div class="content">
+                    <h2>Web Scraper</h2>
+                    <p>From Web to Wisdom: Streamlining Data Extraction for Better Decisions</p>
+                    <ul class="actions stacked">
+                        <li><a href="#" class="button">Learn More</a></li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/webscraping.gif" alt="Web Scraper" />
+                </div>
+            </section>
+
+            <!-- Hackathons -->
+            <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+                <div class="content">
+                    <h2>Hackathons</h2>
+                    <p>Code the Future: Innovate, Compete, Conquer!</p>
+                    <select name="hackathons" id="hackathonDropdown" onchange="handleDropdownChange()">
+                        <option value="" selected disabled>Select a Hackathon</option>
+                        <option value="hackathon1">LEAP 2024 Hackathon AI HACKATHON</option>
+                        <option value="hackathon2">Hello GPT4o AI Challenge</option>
+                    </select>
+                    <ul class="actions stacked">
+                     <!--<li><a href="#" class="button">Learn More</a></li> -->
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/hackathons.webp" alt="Hackathons" />
+                </div>
+            </section>
+
+            <script>
+            function handleDropdownChange() {
+                const dropdown = document.getElementById('hackathonDropdown');
+                const selectedValue = dropdown.value;
+                
+                if (selectedValue === 'hackathon1') {
+                    window.location.href = 'https://lablab.ai/u/@HiraKhalid/clu2ka06j002rbwtfn5czkqks';
+                } else if (selectedValue === 'hackathon2') {
+                    window.location.href = 'https://lablab.ai/u/@HiraKhalid/clxuf2vev003t10o58jpizies';
+                }
+            }
+            </script>
+
+
+
+            <!-- Resume -->
+            <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+                <div class="content">
+                    <h2>Resume</h2>
+                    <p>Concise and Clear: Professional Journey at a Glance</p>
+                    <ul class="actions stacked">
+                        <li><a href="https://drive.google.com/file/d/1K0lMQV8Woti96s52hhbz85bvphr6cJro/view?usp=drive_link" class="button">Learn More</a></li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/geometric.webp" alt="Web Scraper" />
+                </div>
+            </section>
+			
+
+            <!-- Get in Touch -->
+            <section class="wrapper style1 align-center">
+                <div class="inner medium">
+                    <h2>Get in touch</h2>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" value="" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" value="" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions special">
+                            <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="wrapper style1 align-center">
+                <div class="inner">
+                    <ul class="icons">
+                        <li><a href="https://leetcode.com/u/hkhalid99/" class="cib-leetcode"><span class="label">Leetcode</span></a></li>
+                        <li><a href="https://github.com/Hira990" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/hirakhalid99/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="mailto:hkhalid99@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                    <p>&copy; 2024 Hira Khalid</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+		
+    </body>
+</html>
